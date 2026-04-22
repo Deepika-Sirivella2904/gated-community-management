@@ -1,6 +1,6 @@
-# MyGate Society Management Platform
+# Gated Community Management Platform
 
-A comprehensive society/apartment management application inspired by MyGate. Built with React, Node.js, Express, PostgreSQL, and Socket.IO.
+A comprehensive society/apartment management application. Built with React, Node.js, Express, PostgreSQL, and Socket.IO.
 
 ## Features
 
@@ -90,7 +90,7 @@ A comprehensive society/apartment management application inspired by MyGate. Bui
 ## Project Structure
 
 ```
-mygate-society/
+gated-community-management/
 ├── backend/
 │   ├── src/
 │   │   ├── index.js              # Server entry point
@@ -178,8 +178,8 @@ mygate-society/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Deepika-Sirivella2904/mygate-society.git
-cd mygate-society
+git clone https://github.com/Deepika-Sirivella2904/gated-community-management.git
+cd gated-community-management
 ```
 
 ### 2. Set up the database
