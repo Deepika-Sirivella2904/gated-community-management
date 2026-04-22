@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Use deployed backend URL for production
 const api = axios.create({
-  baseURL: 'https://mygate-society.onrender.com',
+  baseURL: 'https://gated-community-management.vercel.app/_backend/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
