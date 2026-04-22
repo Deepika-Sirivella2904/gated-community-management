@@ -1,7 +1,7 @@
 {
-  "name": "mygate-society-backend",
+  "name": "gated-community-management-backend",
   "version": "1.0.0",
-  "description": "MyGate Society Management - Backend API",
+  "description": "Gated Community Management - Backend API",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
