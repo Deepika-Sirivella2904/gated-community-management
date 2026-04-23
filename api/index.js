@@ -1,8 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const bcrypt = require('bcryptjs');
 const pool = require('../backend/src/db/pool');
-const { generateToken, authenticate } = require('../backend/src/middleware/auth');
 
 const app = express();
 
@@ -28,5 +26,7 @@ app.use('/emergency', require('../backend/src/routes/emergency'));
 app.use('/vehicles', require('../backend/src/routes/vehicles'));
 app.use('/society', require('../backend/src/routes/society'));
 
-// Export for Vercel
-module.exports = app;
+// Vercel serverless function handler
+module.exports = (req, res) => {
+  app(req, res);
+};
