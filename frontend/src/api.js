@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Use deployed backend URL for production
+// Use local backend URL for development
 const api = axios.create({
-  baseURL: 'https://gated-community-management.vercel.app/api',
+  baseURL: 'http://localhost:5000/api',
   headers: { 'Content-Type': 'application/json' },
 });
 

@@ -144,22 +144,14 @@ const initDatabase = async () => {
   }
 };
 
-// Start server only if not in Vercel
-if (process.env.VERCEL !== '1') {
-  const PORT = process.env.PORT || 5000;
-  server.listen(PORT, async () => {
-    console.log(`\n🏠 MyGate Society Management Server`);
-    console.log(`   API:    http://localhost:${PORT}/api`);
-    console.log(`   Health: http://localhost:${PORT}/api/health`);
-    console.log(`   Env:    ${process.env.NODE_ENV || 'development'}\n`);
-    
-    // Initialize database
-    await initDatabase();
-  });
-} else {
-  // For Vercel, initialize database on cold start
-  initDatabase().catch(err => console.error('[DB] Init error:', err));
-}
-
-// Export for Vercel
-module.exports = app;
+// Start server
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, async () => {
+  console.log(`\n🏠 MyGate Society Management Server`);
+  console.log(`   API:    http://localhost:${PORT}/api`);
+  console.log(`   Health: http://localhost:${PORT}/api/health`);
+  console.log(`   Env:    ${process.env.NODE_ENV || 'development'}\n`);
+  
+  // Initialize database
+  await initDatabase();
+});
